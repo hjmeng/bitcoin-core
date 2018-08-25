@@ -163,7 +163,7 @@ export default {
   signRawTransactionWithKey: {
     obfuscate: {
       request: {
-        default: params => set([...params], '[2]', map(params[2], () => '******')),
+        default: params => set([...params], '[1]', map(params[1], () => '******')),
         named: params => set(params, 'privkeys', map(params.privkeys || [], () => '******'))
       }
     },
