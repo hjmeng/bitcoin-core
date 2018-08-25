@@ -160,6 +160,15 @@ export default {
     },
     version: '>=0.7.0'
   },
+  signRawTransactionWithKey: {
+    obfuscate: {
+      request: {
+        default: params => set([...params], '[2]', map(params[2], () => '******')),
+        named: params => set(params, 'privkeys', map(params.privkeys || [], () => '******'))
+      }
+    },
+    version: '>=0.18.0'
+	},
   stop: { version: '>=0.1.0' },
   submitBlock: { version: '>=0.7.0' },
   upTime: { version: '>=0.15.0' },

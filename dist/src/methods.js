@@ -347,6 +347,12 @@ var _default = {
     },
     version: '>=0.7.0'
   },
+  signRawTransactionWithKey: {
+    obfuscate: {
+      request: params => (0, _lodash.set)([...params], '[2]', (0, _lodash.map)(params[2], () => '******'))
+    },
+    version: '>=0.18.0'
+  },
   stop: {
     version: '>=0.1.0'
   },
